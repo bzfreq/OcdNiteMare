@@ -1,0 +1,224 @@
+:root{
+  --bg:#0b0b0b;
+  --panel:#101010;
+  --ink:#eeeeee;
+  --muted:#b7b7b7;
+  --line:#2a2a2a;
+  --accent:#e8e8e8;
+}
+
+*{
+  box-sizing:border-box;
+}
+
+html{
+  scroll-behavior:smooth;
+}
+
+body{
+  margin:0;
+  font-family:system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;
+  background:var(--bg);
+  color:var(--ink);
+  line-height:1.6;
+}
+
+/* HERO */
+
+.hero{
+  min-height:100vh;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  padding:64px 18px;
+
+  background:
+    radial-gradient(1200px 600px at 50% 35%, rgba(255,255,255,.08), transparent 60%),
+    linear-gradient(rgba(0,0,0,.78), rgba(0,0,0,.9));
+
+  border-bottom:1px solid var(--line);
+}
+
+.hero-inner{
+  width:min(920px, 100%);
+  text-align:center;
+}
+
+.kicker{
+  color:var(--muted);
+  letter-spacing:.12em;
+  text-transform:uppercase;
+  font-size:.85rem;
+  margin:0 0 10px 0;
+}
+
+h1{
+  margin:0;
+  font-size:clamp(2.4rem, 5vw, 4.1rem);
+  letter-spacing:.08em;
+}
+
+.sub{
+  margin:10px 0 0 0;
+  color:var(--muted);
+  font-size:1.05rem;
+}
+
+.cta{
+  margin-top:28px;
+  display:flex;
+  gap:12px;
+  justify-content:center;
+  flex-wrap:wrap;
+}
+
+/* BUTTONS */
+
+.btn{
+  display:inline-block;
+  padding:12px 18px;
+  border:1px solid var(--accent);
+  color:var(--ink);
+  text-decoration:none;
+  border-radius:10px;
+
+  transition:
+    transform .15s ease,
+    background .15s ease,
+    color .15s ease;
+}
+
+.btn:hover{
+  transform:translateY(-1px);
+  background:var(--accent);
+  color:#000;
+}
+
+.btn.ghost{
+  border-color:var(--line);
+  color:var(--muted);
+}
+
+.btn.ghost:hover{
+  background:var(--panel);
+  color:var(--ink);
+  border-color:var(--accent);
+}
+
+/* SECTIONS */
+
+main{
+  display:block;
+}
+
+.section{
+  width:min(920px, 100%);
+  margin:0 auto;
+  padding:72px 18px;
+}
+
+.section.alt{
+  background:var(--panel);
+  border-top:1px solid var(--line);
+  border-bottom:1px solid var(--line);
+  width:100%;
+}
+
+.section.alt > *{
+  width:min(920px, 100%);
+  margin-left:auto;
+  margin-right:auto;
+}
+
+h2{
+  margin:0 0 14px 0;
+  letter-spacing:.06em;
+}
+
+/* QUOTES */
+
+blockquote{
+  margin:22px 0;
+  padding:14px 16px;
+
+  border-left:3px solid var(--accent);
+
+  color:var(--muted);
+
+  background:rgba(255,255,255,.04);
+
+  border-radius:10px;
+}
+
+/* CREDENTIAL LIST */
+
+.bullets{
+  list-style:none;
+  padding:0;
+  margin:18px 0;
+}
+
+.bullets li{
+  padding:10px 12px;
+  border:1px solid var(--line);
+  border-radius:12px;
+  margin:10px 0;
+  background:rgba(255,255,255,.03);
+}
+
+/* SMALL TEXT */
+
+.fineprint{
+  color:#7f7f7f;
+  font-size:.92rem;
+}
+
+/* MUSIC CARDS */
+
+.cards{
+  margin-top:22px;
+
+  display:grid;
+  grid-template-columns:repeat(auto-fit, minmax(220px, 1fr));
+
+  gap:14px;
+}
+
+.card{
+  border:1px solid var(--line);
+  border-radius:14px;
+  padding:16px;
+  background:rgba(255,255,255,.03);
+}
+
+.card h3{
+  margin:0 0 8px 0;
+}
+
+/* LEGACY STACK */
+
+.stack{
+  color:var(--muted);
+  font-weight:600;
+  letter-spacing:.02em;
+}
+
+.stack span{
+  opacity:.45;
+  padding:0 6px;
+}
+
+/* CONTACT */
+
+.contactline{
+  margin:8px 0;
+}
+
+/* FOOTER */
+
+.footer{
+  border-top:1px solid var(--line);
+  padding:26px 18px;
+  text-align:center;
+  color:#6f6f6f;
+}
